@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "frontpage-e6c4e": {
+      "hosting": {
+        "frontPage": [
+          "frontpage-e6c4e"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "frontpage-e6c4e"
+  }
+}
