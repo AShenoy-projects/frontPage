@@ -17,14 +17,17 @@
     "@angular/core": "~9.1.6",
     "@angular/fire": "^6.1.5",
     "@angular/forms": "~9.1.6",
+    "@angular/localize": "~9.1.6",
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
+    "@ng-bootstrap/ng-bootstrap": "^6.2.0",
+    "animate.css": "^4.1.1",
     "bootstrap": "^5.0.1",
+    "firebase": "^7.0 || ^8.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "zone.js": "~0.10.2",
-    "firebase": "^7.0 || ^8.0"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.5",
