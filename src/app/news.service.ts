@@ -1,10 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
+import { catchError, map } from 'rxjs/operators';
 import { IDisplayList } from './IModels/IDisplayList';
-import { INewsItem } from './IModels/INewsItem';
-import { ITopic } from './IModels/ITopic';
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +26,9 @@ export class NewsService {
             eachTopic.newsitems.splice(0, 1);
           }
           return topicsArray;
+        }),
+        catchError((err) => {
+          throw 'Error trying to map Topics source. Details: ' + err;
         })
       );
   }
