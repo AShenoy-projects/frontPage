@@ -10,7 +10,6 @@ import { NewsService } from './news.service';
 import { AboutComponent } from './about/about.component';
 import { NewsComponent } from './news/news.component';
 import { SearchComponent } from './search/search.component';
-import { NewsitemComponent } from './newsitem/newsitem.component';
 import { TimelineitemComponent } from './timelineitem/timelineitem.component';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,7 +22,6 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     NewsComponent,
     SearchComponent,
-    NewsitemComponent,
     TimelineitemComponent,
     NavbarComponent,
     FooterComponent

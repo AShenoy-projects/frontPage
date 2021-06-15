@@ -5,6 +5,7 @@
 .navbar-brand,
 .navbar-brand:hover {
   color: crimson;
+  font-weight: bold;
 }
 
 .navbar-brand:focus {

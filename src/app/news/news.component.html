@@ -1,1 +1,42 @@
-<p>news works!</p>
+<div class="container" *ngFor="let topic of alltopics$ | async; let i = index">
+  <div
+    *ngIf="topic.latestNewsItem as newsItem"
+    class="card shadow rounded mb-3"
+  >
+    <div class="card-body">
+      <div class="fpRow">
+        <div class="me-3">
+          <img
+            class="shadow-lg rounded center-cropped"
+            [src]="newsItem.imgUrl"
+          />
+        </div>
+        <div>
+          <h3 class="featurette-heading">
+            {{ newsItem.headline }}
+          </h3>
+          <p>
+            <a
+              class="animate_flash"
+              data-bs-toggle="collapse"
+              href="#timelineCollapse{{ i }}"
+              role="button"
+              aria-expanded="false"
+              aria-controls="timelineCollapse"
+              *ngIf="topic.newsitems.length"
+            >
+              Timeline
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer text-center text-muted">
+      <span class="pe-5">{{ newsItem.publishDate | date }}</span>
+    </div>
+  </div>
+  <div class="collapse" id="timelineCollapse{{ i }}">
+    <fPtimelineitem [newsItemObservable]="topic"></fPtimelineitem>
+  </div>
+</div>

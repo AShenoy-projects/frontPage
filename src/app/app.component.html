@@ -1,3 +1,28 @@
 <fPnavbar></fPnavbar>
+<div class="container">
+  <div class="alert alert-success" role="alert" *ngIf="showWelcomeMsg">
+    <h4 class="alert-heading">Hello!</h4>
+    <p>
+      Thanks for showing interest. This is a demo site to showcase the news
+      timeline concept. Please visit
+      <a href="https://thebigpicture-timeline.web.app/news" target="__blank"
+        >link</a
+      >
+      to check out the current version of the project.
+    </p>
+    <hr />
+    <p class="mb-0">
+      Contact me at ananthshenoy@ymail.com
+      <button
+        type="button"
+        class="btn btn-link"
+        style="float: right"
+        (click)="showWelcomeMsg = false"
+      >
+        Close
+      </button>
+    </p>
+  </div>
+</div>
 <router-outlet></router-outlet>
 <fPFooter></fPFooter>
